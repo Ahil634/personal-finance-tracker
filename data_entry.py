@@ -7,7 +7,6 @@ def get_date(prompt, allow_default=False):
     date_str = input(prompt)
     if allow_default and not date_str:
         return datetime.today().strftime(date_format)
-    
     try:
         valid_date = datetime.strptime(date_str, date_format)
         return valid_date.strftime(date_format)
